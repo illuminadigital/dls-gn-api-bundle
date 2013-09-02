@@ -68,3 +68,17 @@ parameters:
     illumina_gn_key: '8405fe88e4611a2a085358c27e5b4a19'
     illumina_gn_secret: 'eaee64cee30571e4f1d806662c509a6a
 ```
+
+### Step 3: Use the GnApiBundle
+
+In a controller
+
+``` php
+<?php
+
+// Get all the user info
+$this->get('illumina.gn.retriever')->getUserInfo(USER_TOKEN,USERNAME);
+
+//Get the current time on the API server
+$this->get('illumina.gn.retriever')->getTime();
+```
