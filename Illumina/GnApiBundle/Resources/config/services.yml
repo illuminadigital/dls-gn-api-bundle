@@ -1,0 +1,10 @@
+parameters:
+#    illumina_gn_api.example.class: Illumina\GnApiBundle\Example
+
+services:
+    illumina.gn.retriever:
+        class:  Illumina\GnApiBundle\DependencyInjection\ContentRetrieverService
+        arguments:  [ @service_container, %illumina_gn_base_url% , %illumina_gn_key% , %illumina_gn_secret% ]
+    illumina.gn.api:
+        class:  Illumina\GnApiBundle\DependencyInjection\APILibrary
+        arguments:  [ @service_container, %illumina_gn_key% , %illumina_gn_secret% ]

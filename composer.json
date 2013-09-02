@@ -1,0 +1,15 @@
+{
+    "name": "illuminadigital/dls-gn-api",
+    "type": "symfony-bundle",
+    "description": "Good Neighbours APIU consumption bundle for Symfony2",
+    "require": {
+        "symfony/framework-bundle": "~2.0",
+        "oauth-php/oauth-php": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Illumina\\GnApiBundle": ""
+        }
+    },
+    "minimum-stability": "dev"
+}
