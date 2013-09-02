@@ -1,5 +1,5 @@
 {
-    "name": "illuminadigital/dls-gn-api",
+    "name": "illuminadigital/dls-gn-api-bundle",
     "type": "symfony-bundle",
     "description": "Good Neighbours APIU consumption bundle for Symfony2",
     "require": {
