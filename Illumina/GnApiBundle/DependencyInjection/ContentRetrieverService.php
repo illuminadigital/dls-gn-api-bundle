@@ -51,7 +51,7 @@ class ContentRetrieverService {
 
     public function buildUserUrl($requestPage)
     {
-        $baseUrl = $this->siteBase.'/api/users/'.$requestPage;
+        $baseUrl = $this->siteBase.'/api/user/'.$requestPage;
         return $baseUrl;
     }
 
