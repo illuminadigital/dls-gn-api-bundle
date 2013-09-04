@@ -49,15 +49,15 @@ class ContentRetrieverService {
         return $formattedResponse;
     }
 
-    public function buildUserUrl($targetUsername,$requestPage)
+    public function buildUserUrl($requestPage)
     {
-        $baseUrl = $this->siteBase.'/api/users/{USERNAME}/'.$requestPage;
-        return str_replace('{USERNAME}',$targetUsername,$baseUrl);
+        $baseUrl = $this->siteBase.'/api/users/'.$requestPage;
+        return $baseUrl;
     }
 
-    public function getUserInfo($userToken,$targetUsername)
+    public function getUserInfo($userToken)
     {
-        $url = $this->buildUserUrl($targetUsername,'info');
+        $url = $this->buildUserUrl('info');
 
         return $this->sendRequest($url,$this->container->get('illumina.gn.api')->generateSecureParams($userToken));
     }

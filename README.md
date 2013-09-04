@@ -1,6 +1,8 @@
 Good Neighbours API Symfony2 Bundle
 ========================
 
+API Documentation /api/doc/
+
 ## Installation
 
 Installation is a quick process:
