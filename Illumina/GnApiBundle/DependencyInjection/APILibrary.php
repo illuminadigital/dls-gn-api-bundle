@@ -30,7 +30,7 @@ class APILibrary {
 
     public function generateHashString($key, $secret, $userToken, $timestamp, $encoding='md5')
     {
-        if ($encoding = 'sha1') {
+        if ($encoding == 'sha1') {
             return sha1($key.$userToken.$timestamp.$secret);
         } else {
             return md5($key.$userToken.$timestamp.$secret);
