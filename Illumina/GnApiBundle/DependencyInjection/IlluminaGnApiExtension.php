@@ -24,5 +24,12 @@ class IlluminaGnApiExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+
+        $configuration = new Configuration();
+        $config = $this->processConfiguration($configuration, $configs);
+
+        $container->setParameter('illumina_gn.base_url', $config['base_url']);
+        $container->setParameter('illumina_gn.key', $config['key']);
+        $container->setParameter('illumina_gn.secret', $config['secret']);
     }
 }
