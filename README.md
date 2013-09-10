@@ -66,9 +66,18 @@ public function registerBundles()
 ``` js
 // app/config/parameters.yml
 parameters:
-    illumina_gn_base_url: 'http://gn.gary.illuminadev.co.uk'
-    illumina_gn_key: '8405fe88e4611a2a085358c27e5b4a19'
-    illumina_gn_secret: 'eaee64cee30571e4f1d806662c509a6a
+    illumina.gn.base_url: 'URL'
+    illumina.gn.key: 'KEY'
+    illumina.gn.secret: 'SECRET
+```
+
+``` js
+// app/config/config.yml
+# GN API Bundle config
+illumina_gn_api:
+    base_url:   %illumina.gn.base_url%
+    key:        %illumina.gn.key%
+    secret:     %illumina.gn.secret%
 ```
 
 ### Step 3: Use the GnApiBundle
